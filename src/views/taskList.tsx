@@ -14,12 +14,7 @@ export const ListTaskView = (props: Props) => {
             key={task.id}
         ></TaskCard>
     ));
-    return (
-        <p>
-            <ul>{cards}</ul>
-        </p>
-    );
-    // private tasks: ITask[] = [];
+    return <div className="row p-2">{cards}</div>;
 };
 
 interface TaskCardProps {
@@ -34,9 +29,14 @@ const TaskCard = (props: TaskCardProps) => {
     }
 
     return (
-        <li>
-            [{props.task.id}] {props.task.text}{" "}
-            <button onClick={clickDone}>done</button>
-        </li>
+        <div className="card m-2" style={{ width: "28rem" }}>
+            <div className="card-body">
+                <h5 className="card-title">{props.task.id}</h5>
+                <p className="card-text">{props.task.text}</p>
+                <button className="btn btn-primary" onClick={clickDone}>
+                    done
+                </button>
+            </div>
+        </div>
     );
 };
