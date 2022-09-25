@@ -1,12 +1,19 @@
 import { useForm } from "react-hook-form";
-import { ITask } from "../entity/task";
+import { Task } from "../entity/task";
+import * as api from "../api/task";
 
-export const NewTaskForm = () => {
-    const { register, handleSubmit, reset } = useForm<ITask>();
+interface Props {
+    reloadTasks: () => Promise<void>;
+}
 
-    const onSubmit = async (data: ITask) => {
-        console.log(data);
+export const NewTaskForm = (props: Props) => {
+    const { register, handleSubmit, reset } = useForm<Task>();
+
+    const onSubmit = async (task: Task) => {
+        console.log(task);
+        await api.postTask(task);
         reset();
+        await props.reloadTasks();
     };
 
     return (
