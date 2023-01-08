@@ -28,6 +28,8 @@
     // TypeScriptコンパイラが直接ファイル出力しないようにする
     "noEmit": true,
 
+    "sourceMap": true,
+
     // 拡張子 tsx で利用するUIフレームワーク
     "jsx": "react-jsx"
   },
