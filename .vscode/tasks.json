@@ -1,0 +1,27 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "webpack build",
+      "command": ["npx", "webpack"],
+      "type": "shell",
+      "problemMatcher": ["$tsc"],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    },
+    {
+      "label": "webpack build (watch)",
+      "command": ["npx", "webpack", "-w"],
+      "type": "shell",
+      "problemMatcher": ["$tsc"],
+      "presentation": {
+        "reveal": "silent"
+      },
+      "runOptions": {
+        "runOn": "folderOpen"
+      }
+    }
+  ]
+}
