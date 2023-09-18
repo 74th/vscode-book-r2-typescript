@@ -1,12 +1,12 @@
 import { Task } from "../entity/task";
 import * as api from "../api/task";
 
-interface Props {
+interface ListTaskViewProps {
     taskList: Task[];
     reloadTasks: () => Promise<void>;
 }
 
-export const ListTaskView = (props: Props) => {
+export const ListTaskView = (props: ListTaskViewProps) => {
     const cards = props.taskList.map((task) => (
         <TaskCard
             task={task}
