@@ -1,5 +1,7 @@
 # Visual Studio Code 実践ガイド 第 2 版 第 2 部 TypeScriptでの開発 サンプルコード
 
+https://gihyo.jp/book/2024/978-4-297-13909-4
+
 ## LICENSE
 
 - MIT License
